@@ -1,54 +1,94 @@
+/* Body styles */
 body {
-    background-color: #FFFFFF;
-    color: #000000;
-    transition: background-color 0.3s, color 0.3s;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #FFFFFF; /* Default light theme */
 }
 
-.dark-mode {
-    background-color: #121318;
-    color: #FFFFFF;
+/* Device detection (add media queries for specific devices if needed) */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121318; /* Dark theme */
+    }
 }
 
-.navbar {
-    width: 100%;
-    position: fixed;
-    top: 0;
+/* Header styles */
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
-    transition: top 0.3s;
+    padding: 1rem 2rem;
+    background: rgba(0, 0, 0, 0.3); /* Blurred background */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100; /* Ensure header stays on top */
+    transition: top 0.3s ease-in-out; /* Animation for scrolling */
 }
 
-.navbar.hidden {
-    top: -50px;
+.header.hidden {
+    top: -100%; /* Hide header on scroll up */
 }
 
-.navbar .fa-bars {
-    font-size: 24px; /* Adjust the size as needed */
+.hamburger-container,
+.logo-container {
+    display: flex;
+    align-items: center;
 }
 
-.content {
-    margin-top: 60px;
+.hamburger {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.hamburger img {
+    width: 24px;
+    height: 24px;
+}
+
+.logo-container {
+    margin-left: auto;
+}
+
+/* Main content styles */
+.main-content {
+    padding-top: 10rem; /* Adjust padding based on header height */
     text-align: center;
 }
 
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 10px;
-    border-radius: 50px;
-    border: 2px solid #43444C;
-    text-decoration: none;
-    color: inherit;
+.welcome {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #fff; /* White for both themes */
 }
 
-.button-get-started {
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.get-started,
+.learn-more {
     background-color: #A9C8FF;
+    color: #000; /* Black for both themes */
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
 }
 
-.button-learn-more {
+.get-started:hover,
+.learn-more:hover {
+    opacity: 0.8;
+}
+
+.learn-more {
     background-color: #121318;
-    color: #FFFFFF;
+    color: #2962FF; /* Light blue for dark theme */
 }
