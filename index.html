@@ -4,51 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
-    <style>
-        body {
-            background-color: #FFFFFF;
-            color: #000000;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .dark-mode {
-            background-color: #121318;
-            color: #FFFFFF;
-        }
-        .navbar {
-            width: 100%;
-            position: fixed;
-            top: 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
-            transition: top 0.3s;
-        }
-        .navbar.hidden {
-            top: -50px;
-        }
-        .content {
-            margin-top: 60px;
-            text-align: center;
-        }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 10px;
-            border-radius: 50px;
-            border: 2px solid #43444C;
-            text-decoration: none;
-            color: inherit;
-        }
-        .button-get-started {
-            background-color: #A9C8FF;
-        }
-        .button-learn-more {
-            background-color: #121318;
-            color: #FFFFFF;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="navbar" id="navbar">
@@ -60,31 +16,6 @@
         <a href="#" class="button button-get-started">Get Started</a>
         <a href="#" class="button button-learn-more">Learn More</a>
     </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const navbar = document.getElementById('navbar');
-
-            let lastScrollTop = 0;
-            window.addEventListener('scroll', function() {
-                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                if (scrollTop > lastScrollTop) {
-                    navbar.classList.add('hidden');
-                } else {
-                    navbar.classList.remove('hidden');
-                }
-                lastScrollTop = scrollTop;
-            });
-
-            const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-            if (prefersDarkScheme.matches) {
-                document.body.classList.add("dark-mode");
-            }
-
-            prefersDarkScheme.addEventListener("change", function(e) {
-                document.body.classList.toggle("dark-mode", e.matches);
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
