@@ -21,3 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.toggle("dark-mode", e.matches);
     });
 });
+
+.navbar img {
+    max-height: 40px; /* Adjust the height as needed */
+    width: auto; /* Maintains aspect ratio */
+}
