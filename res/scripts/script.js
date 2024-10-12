@@ -1,23 +1,8 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const navbar = document.getElementById('navbar');
+const header = document.querySelector('.header');
+const welcome = document.querySelector('.welcome');
 
-    let lastScrollTop = 0;
-    window.addEventListener('scroll', function() {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollTop > lastScrollTop) {
-            navbar.classList.add('hidden');
-        } else {
-            navbar.classList.remove('hidden');
-        }
-        lastScrollTop = scrollTop;
-    });
+let lastScrollY = 0;
+let isHidden = false;
 
-    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-    if (prefersDarkScheme.matches) {
-        document.body.classList.add("dark-mode");
-    }
-
-    prefersDarkScheme.addEventListener("change", function(e) {
-        document.body.classList.toggle("dark-mode", e.matches);
-    });
-});
+window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY
