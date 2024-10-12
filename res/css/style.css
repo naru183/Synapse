@@ -25,6 +25,10 @@ body {
     top: -50px;
 }
 
+.navbar .fa-bars {
+    font-size: 24px; /* Adjust the size as needed */
+}
+
 .content {
     margin-top: 60px;
     text-align: center;
