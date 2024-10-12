@@ -1,1 +1,50 @@
-css files is being created.
+body {
+    background-color: #FFFFFF;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode {
+    background-color: #121318;
+    color: #FFFFFF;
+}
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    transition: top 0.3s;
+}
+
+.navbar.hidden {
+    top: -50px;
+}
+
+.content {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 50px;
+    border: 2px solid #43444C;
+    text-decoration: none;
+    color: inherit;
+}
+
+.button-get-started {
+    background-color: #A9C8FF;
+}
+
+.button-learn-more {
+    background-color: #121318;
+    color: #FFFFFF;
+}
