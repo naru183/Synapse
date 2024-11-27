@@ -49,7 +49,7 @@ Distributed under the [MIT License](LICENSE).
 
 For inquiries and issues, feel free to reach out:
 
-- **Mashika Hamed**
+- **MD Ashik**
 - 📧 **mashikahamed0@gmail.com**
 - 🌐 **[StudioAs Inc.](https://studioasinc.github.io/web/)**
 
